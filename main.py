@@ -37,19 +37,10 @@ jessie = 372
 
 inBattle = 0
 
-async def change_status():
-    await client.wait_until_ready()
-    msgs = cycle(status)
-    
-    while not client.is_closed:
-        current_status = next(msgs)
-        await client.change_presence(game=discord.Game(name=current_status))
-        await asyncio.sleep(2)
            
         
 @client.event
 async def on_ready():
-    await client.change_presence(game=discord.Game(name='Online!'))
     print("Bot is ready")
 
 @client.event
@@ -337,5 +328,4 @@ async def say(*args):
     
 
     
-client.loop.create_task(change_status())
 client.run(os.environ['BOT_TOKEN'])    

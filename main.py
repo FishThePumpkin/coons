@@ -56,7 +56,7 @@ async def on_message(message):
         if rnd in range(10):
             rnd = randint(0,len(coonsdict) - 1)
             if message.content.find('EMOJI_NAME'):
-                for x in client.get_all_emojis():
+                for x in client.emojis():
                     if x.id == coonsdict[coons[rnd]]:
                         await client.add_reaction(message, x)
         if "hi" in mess:

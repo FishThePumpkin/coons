@@ -29,7 +29,7 @@ coonsdict = {
 
 client = commands.Bot(command_prefix = '-!')
 client.remove_command('help')
-status = ['Rocky', 'x', 'Rachel']
+status = ['COONS', 'COOOOOOONS']
 
 
 async def change_status():

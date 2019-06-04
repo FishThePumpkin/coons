@@ -31,7 +31,7 @@ async def on_message(message):
     print(chance)
     mess = message.content.lower()
     if "1" in mess:
-      await client.send_message(message.channel,"hi")
+      await message.channel.send('hi')
         
 @client.command()
 async def ping():

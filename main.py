@@ -32,6 +32,18 @@ async def on_message(message):
     mess = message.content.lower()
     if "1" in mess:
       await message.channel.send('hi')
+    mess = message.content.lower()
+    auth = message.author
+    rnd = randint(0,100)
+    if not auth.id == "585341561345409044":
+        if rnd in range(10):
+            rnd = randint(0,len(coonsdict) - 1)
+            if message.content.find('EMOJI_NAME'):
+                for x in client.get_all_emojis():
+                    if x.id == coonsdict[coons[rnd]]:
+                        await client.add_reaction(message, x)
+        if "hi" in mess:
+            await message.channel.send('hi')
         
 @client.command()
 async def ping():

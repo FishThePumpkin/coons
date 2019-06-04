@@ -1,2 +1,1 @@
-
-worker: python jessie.py
+worker: python main.py
